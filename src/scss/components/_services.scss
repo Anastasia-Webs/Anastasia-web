@@ -1,0 +1,108 @@
+.services { padding: 150px 0 100px; }
+
+.services__inner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 155px;
+  align-items: center;
+}
+
+.services__head { max-width: 520px; }
+
+.services__over {
+  margin: 0 0 32px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  color: #e2e2e2;
+  opacity: .9;
+}
+
+.services__title {
+  margin: 0 0 18px;
+  font-family: var(--third-family);
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 1.3;
+  color: #e2e2e2;
+}
+
+.services__text {
+  margin: 0 0 36px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(226,226,226,.85);
+}
+
+.services__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #e2e2e2;
+  text-decoration: none;
+}
+
+.services__arrow { width: 18px; height: 18px; }
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 262px);
+  grid-auto-rows: 269px;
+  gap: 40px;
+}
+
+.services__card {
+  width: 262px;
+  height: 269px;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 30px;
+  background: #0b0f15;
+  box-shadow: 4px 4px 30px rgba(0,0,0,.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  text-align: center;
+}
+
+.services__icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+.services__icon img { width: 34px; height: 34px; }
+
+.services__icon--gray { background: #e2e2e2; }
+.services__icon--green { background: #8eea77; }
+.services__icon--red { background: #ff4646; }
+.services__icon--yellow { background: #ffb21a; }
+
+.services__name {
+  margin: 0;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.42;
+  color: #e2e2e2;
+}
+
+@media (max-width: 1200px) {
+  .services__inner { grid-template-columns: 1fr; row-gap: 40px; }
+  .services__head { margin: 0 auto; text-align: left; }
+  .services__grid { grid-template-columns: repeat(2, 1fr); justify-items: center; }
+  .services__card { width: 100%; max-width: 262px; }
+}
+
+@media (max-width: 620px) {
+  .services__grid { grid-template-columns: 1fr; }
+}
