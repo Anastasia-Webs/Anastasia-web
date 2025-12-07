@@ -1,9 +1,19 @@
-@import "./mixins/breakpoint";
-@import "./mixins/burger";
-@import "./mixins/checkbox";
-@import "./mixins/font-face";
-@import "./mixins/flex";
-@import "./mixins/mini";
-@import "./mixins/tabs";
-@import "./mixins/disable-mob-hover";
-@import "./mixins/layout";
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+
+// тестовые стили, удалите их
+.page__body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--vh);
+}
+
+@import "mixins/breakpoint";
+@import "mixins/burger";

@@ -1,1 +1,48 @@
-// ваш код
+.header {
+  background: #0f0f10;
+  height: 80px;
+  width: 100%;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 16px;
+  }
+
+  &__logo { display: inline-flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; white-space: nowrap; }
+  &__logo-img { width: 36px; height: 36px; }
+  &__logo-text { display: inline-flex; flex-direction: column; line-height: 1; }
+  &__logo-title { font-weight: 700; font-size: 18px; }
+  &__logo-sub { font-weight: 500; font-size: 12px; opacity: .75; }
+
+  &__nav { display: flex; margin-left: auto; margin-right: 24px; }
+
+  &__list { display: flex; align-items: center; gap: 32px; margin: 0; padding: 0; list-style: none; }
+
+  &__link { color: rgba(255,255,255,.6); font-weight: 600; text-decoration: none; transition: color .2s; }
+  &__link:hover, &__link--active { color: #fff; }
+
+  &__button {
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 44px; padding: 0 22px; border-radius: 999px;
+    border: 1px solid rgba(255,255,255,.35); color: #fff; text-decoration: none;
+    transition: border-color .2s;
+  }
+  &__button:hover { border-color: #fff; }
+
+  .burger { display: none; }
+
+  @include small-tablet {
+    &__nav { position: fixed; top: 80px; right: -100%; width: 80%; max-width: 320px; height: calc(100vh - 80px); background: #0f0f10; transition: right .3s; box-shadow: -2px 0 20px rgba(0,0,0,.35); z-index: 50; }
+    &__nav.menu--active { right: 0; }
+    &__list { flex-direction: column; align-items: flex-start; gap: 20px; padding: 24px; }
+    &__button { display: none; }
+    .burger { @include burger; display: inline-flex; z-index: 60; }
+  }
+}
