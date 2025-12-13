@@ -22,7 +22,6 @@ body {
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; margin: 0; padding: 0; }
 
-/* общий контейнер: по бокам 100px */
 .container {
   width: 100%;
   padding-left: 100px;
@@ -30,11 +29,19 @@ ul { list-style: none; margin: 0; padding: 0; }
   margin: 0 auto;
 }
 
-/* спец-контейнер для 1-й секции: по бокам ~280px */
 .container--hero {
   padding-left: 280px;
   padding-right: 280px;
 }
 
-/* отступ сверху 72px, между шапкой и секцией 68px */
 .header { margin-top: 72px; margin-bottom: 68px; }
+
+
+:root { --hover-opacity: .75; }
+
+a, button {
+  transition: opacity .2s ease;
+}
+a:hover, button:hover {
+  opacity: var(--hover-opacity);
+}

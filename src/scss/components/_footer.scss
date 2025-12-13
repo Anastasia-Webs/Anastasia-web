@@ -1,0 +1,126 @@
+.footer { margin-top: 178px; }
+
+.footer__bg {
+  background: #3c3c3f;
+  padding-top: 132px;
+  padding-bottom: 60px;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 187px 1fr;
+  column-gap: 68px;
+  align-items: start;
+  justify-content: center;
+  max-width: 1100px;
+  margin: 0 auto 77px;
+}
+
+.footer__brand-card {
+  width: 187px;
+  height: 88px;
+  background: #e2e2e2;
+  border-radius: 20px;
+  padding: 19px 26px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__brand-logo { width: 28px; height: 28px; }
+
+.footer__brand-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #1d1d1d;
+}
+
+.footer__brand-sub {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #1d1d1d;
+  margin-top: 4px;
+}
+
+.footer__cols {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 77px;
+}
+
+.footer__col-title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 22px;
+  color: #e2e2e2;
+  margin-bottom: 16px;
+}
+
+.footer__list { display: grid; gap: 10px; }
+
+.footer__link,
+.footer__text {
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 18px;
+  color: #e2e2e2;
+  opacity: .9;
+  text-decoration: none;
+}
+
+.footer__bottom {
+  display: grid;
+  justify-items: center;
+  row-gap: 17px;
+}
+
+.footer__social {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 17px;
+}
+
+.footer__soc {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #e2e2e2;
+  display: grid;
+  place-items: center;
+}
+.footer__soc img { width: 18px; height: 18px; }
+
+.footer__line {
+  width: 500px;
+  height: 0;
+  border-top: 1px solid #e2e2e2;
+  margin-bottom: 16px;
+}
+
+.footer__copy {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #e2e2e2;
+}
+
+@media (max-width: 1200px) {
+  .footer__top { max-width: 1000px; }
+  .footer__cols { gap: 48px; }
+}
+
+@media (max-width: 991.98px) {
+  .footer__top { grid-template-columns: 1fr; row-gap: 32px; max-width: 720px; }
+  .footer__brand-card { margin: 0 auto; }
+  .footer__cols { grid-template-columns: repeat(2, minmax(180px, 1fr)); justify-items: center; }
+  .footer__line { width: 100%; max-width: 500px; }
+}
+
+@media (max-width: 600px) {
+  .footer__cols { grid-template-columns: 1fr; }
+}
